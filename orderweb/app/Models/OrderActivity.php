@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Observation extends Model
+class OrderActivity extends Model
 {
     use HasFactory;
 
-    protected $table = 'observation';
-    protected $fillable = [
-        'description',
+    protected $table = 'order_activity';
+    protected $filllable = [
+        'order_id',
+        'activity_id'
     ];
 }
