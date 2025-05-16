@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>    
+    <body>
+              
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; ORDER WEB SENA 2025</span>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>
+<?php /**PATH C:\xampp\htdocs\orderweb-laravel-example\orderweb\resources\views/templates/footer.blade.php ENDPATH**/ ?>
