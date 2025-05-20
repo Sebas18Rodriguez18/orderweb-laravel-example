@@ -1,11 +1,11 @@
 @extends('templates.base')
-@section('title', 'Crear causal')
-@section('header', 'Crear causal')
+@section('title', 'Editar observaciones')
+@section('header', 'Editar observaciones')
 @section('content')
 
 <div class="row">
     <div class="col-lg-12 mb-4">
-        <form action="{{ route('causal.store') }}" method="post">
+        <form action="" method="post">
             @csrf
             <div class="row form-group">
                 <div class="col-lg-12 mb-4">
