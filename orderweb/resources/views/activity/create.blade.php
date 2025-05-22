@@ -22,6 +22,11 @@
                     <label for="technician_id">Técnico</label>
                     <select name="technician_id" id="technician_id" class="form-control">
                         <option value="">Seleccione</option>
+                        @foreach ($technicians as $technician)
+                            <option value="{{ $technician['id'] }}">
+                                {{ $technician['name'] }}
+                            </option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="col-lg-6 mb-4">

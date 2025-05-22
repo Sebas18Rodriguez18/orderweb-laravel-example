@@ -5,12 +5,14 @@
 
 <div class="row">
     <div class="col-lg-12 mb-4">
-        <form action="" method="post">
+        <form action="{{ route('type_activity.update', $typeActivity['id']) }}" method="post">
             @csrf
+            @method('PUT')
             <div class="row form-group">
                 <div class="col-lg-12 mb-4">
                     <label for="description">Descripción</label>
-                    <input type="text" class="form-control" name="description" id="description" required>
+                    <input type="text" class="form-control" name="description" id="description" required
+                    value="{{ $typeActivity['description'] }}">
                 </div>
             </div>
             <div class="row">
