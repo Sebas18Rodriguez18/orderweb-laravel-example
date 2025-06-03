@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-lg-4 mb-4">
                     <label for="phone">Teléfono</label>
-                    <input type="text" class="form-control" name="phone" id="phone" required
+                    <input type="text" class="form-control" name="phone" id="phone"
                     value="{{ $technician['phone'] }}">
                 </div>
             </div>

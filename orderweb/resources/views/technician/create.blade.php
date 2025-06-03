@@ -1,47 +1,50 @@
 @extends('templates.base')
-@section('title', 'Tecnicos')
-@section('header', 'Tecnicos')
+@section('title', 'Crear técnico')
+@section('header', 'Crear técnico')
 @section('content')
+    @include('templates.messages')
 
-<div class="row">
-    <div class="col-lg-12 mb-4">
-        <form action="{{ route('technician.store') }}" method="post">
-            @csrf
-            <div class="row form-group">
-                <div class="col-lg-6 mb-4">
-                    <label for="document">Documento</label>
-                    <input type="number" class="form-control" name="document" id="document" required>
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <form action="{{ route('technician.store') }}" method="post">
+                @csrf
+                <div class="row form-group">
+                    <div class="col-lg-6 mb-4">
+                        <label for="name">Nombre</label>
+                        <input type="text" class="form-control" name="name" id="name" required value="{{ old('name') }}">
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <label for="document">Documento</label>
+                        <input type="number" class="form-control" name="document" id="document" required value="{{ old('document') }}">
+                    </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <label for="name">Nombre</label>
-                    <input type="text" class="form-control" name="name" id="name" required>
+                <div class="row form-group">
+                    <div class="col-lg-6 mb-4">
+                        <label for="phone">Teléfono</label>
+                        <input type="text" class="form-control" name="phone" id="phone" value="{{ old('phone') }}">
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <label for="speciality">Especialidad</label>
+                        <input list="specialities-list" class="form-control" name="speciality" id="speciality" value="{{ old('speciality') }}">
+                        <datalist id="specialities-list">
+                            <option>Instalación de redes</option>
+                            <option>Construcción</option>
+                            <option>Lectura de redes</option>
+                            <option>Plomería</option>
+                        </datalist>
+                    </div>
                 </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-lg-4 mb-4">
-                    <label for="speciality">Especialidad</label>
-                    <select name="speciality" id="speciality" class="form-control">
-                        <option value="">Seleccione</option>
-                    </select>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                    </div>
+                    <br><br>
+                    <div class="col-lg-6">
+                        <a href="{{ route('technician.index') }}" class="btn btn-secondary btn-block">Cancelar</a>
+                    </div>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <label for="phone">Teléfono</label>
-                    <select name="phone" id="phone" class="form-control">
-                        <option value="">Seleccione</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <button type="submit" class="btn btn-primary btn-block">Guardar</button>
-                </div>
-                <br><br>
-                <div class="col-lg-6">
-                    <a href="{{ route('technician.index') }}" class="btn btn-secondary btn-block">Cancelar</a>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
-    
-@endsection
+        
+    @endsection
