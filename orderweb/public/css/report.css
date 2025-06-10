@@ -33,3 +33,9 @@ body {
     font-size: small;
     font-style: italic;
 }
+
+#reportTableInfo{
+    border-collapse: 0px;
+    padding: 8px;
+    text-align: center;
+}

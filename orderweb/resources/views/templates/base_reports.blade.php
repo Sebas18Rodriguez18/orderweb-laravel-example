@@ -11,7 +11,7 @@
             <tr>
                 <th>
                     <div style="text-align: center">
-                        <img src="{{ asset('images/logo.jpg') }}" alt="logo">
+                        <img src="{{ asset('img/logo.jpg') }}" alt="logo">
                     </div>
                 </th>
                 <th>
@@ -39,9 +39,8 @@
 
     @yield('content')
 
-    <footer id="version_text">
+    <footer id="version-text">
         <p>Generado por OrderWeb 1.0</p>
     </footer>
-
 </body>
 </html>
